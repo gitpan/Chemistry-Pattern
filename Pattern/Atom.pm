@@ -1,6 +1,6 @@
 package Chemistry::Pattern::Atom;
-$VERSION = '0.21';
-# $Id: Atom.pm,v 1.9 2004/06/18 00:39:17 itubert Exp $
+$VERSION = '0.25';
+# $Id: Atom.pm,v 1.10 2004/08/06 01:02:21 itubert Exp $
 
 =head1 NAME
 
@@ -83,7 +83,7 @@ Chemistry::Obj::accessor('map_to');
 
 =head1 VERSION
 
-0.21
+0.25
 
 =head1 SEE ALSO
 
@@ -93,12 +93,12 @@ The PerlMol website L<http://www.perlmol.org/>
 
 =head1 AUTHOR
 
-Ivan Tubert E<lt>itub@cpan.orgE<gt>
+Ivan Tubert-Brohman E<lt>itub@cpan.orgE<gt>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2004 Ivan Tubert. All rights reserved. This program is free
-software; you can redistribute it and/or modify it under the same terms as
+Copyright (c) 2004 Ivan Tubert-Brohman. All rights reserved. This program is
+free software; you can redistribute it and/or modify it under the same terms as
 Perl itself.
 
 =cut
