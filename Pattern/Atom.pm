@@ -1,6 +1,6 @@
 package Chemistry::Pattern::Atom;
-$VERSION = '0.20';
-# $Id: Atom.pm,v 1.8 2004/05/31 23:13:47 itubert Exp $
+$VERSION = '0.21';
+# $Id: Atom.pm,v 1.9 2004/06/18 00:39:17 itubert Exp $
 
 =head1 NAME
 
@@ -83,7 +83,7 @@ Chemistry::Obj::accessor('map_to');
 
 =head1 VERSION
 
-0.20
+0.21
 
 =head1 SEE ALSO
 

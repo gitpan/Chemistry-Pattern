@@ -1,6 +1,6 @@
 package Chemistry::Pattern;
-$VERSION = '0.20';
-# $Id: Pattern.pm,v 1.16 2004/05/31 23:13:47 itubert Exp $
+$VERSION = '0.21';
+# $Id: Pattern.pm,v 1.17 2004/06/18 00:39:17 itubert Exp $
 
 =head1 NAME
 
@@ -115,28 +115,9 @@ sub options {
     }
 }
 
-=item $mol->new_atom(name => value, ...)
+sub atom_class { "Chemistry::Pattern::Atom"; }
 
-Shorthand for $mol->add_atom(Chemistry::Atom->new(name => value, ...));
-
-=cut
-
-sub new_atom {
-    my $self = shift;
-    $self->add_atom(Chemistry::Pattern::Atom->new(@_));
-}
-
-
-=item $mol->new_bond(name => value, ...)
-
-Shorthand for $mol->add_bond(Chemistry::Bond->new(name => value, ...));
-
-=cut
-
-sub new_bond {
-    my $self = shift;
-    $self->add_bond(Chemistry::Pattern::Bond->new(@_));
-}
+sub bond_class { "Chemistry::Pattern::Bond"; }
 
 our $DEBUG = 0;
 
@@ -472,7 +453,7 @@ sub _flatten {
 
 =head1 VERSION
 
-0.20
+0.21
 
 =head1 SEE ALSO
 
