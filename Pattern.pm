@@ -1,6 +1,6 @@
 package Chemistry::Pattern;
-$VERSION = '0.26';
-# $Id: Pattern.pm,v 1.19 2005/05/16 22:08:15 itubert Exp $
+$VERSION = '0.27';
+# $Id: Pattern.pm,v 1.21 2009/05/10 20:56:06 itubert Exp $
 
 =head1 NAME
 
@@ -208,10 +208,11 @@ sub bond_map {
 
 =item $pattern->match($mol, %options)
 
-Returns true if the pattern matches the molecule. If called again for the 
-same molecule, continues matching where it left off (in a way similar to global
+Returns true if the pattern matches the molecule. If called again for the same
+molecule, continues matching where it left off (in a way similar to global
 regular expressions under scalar context). When there are no matches left,
-returns false.
+returns false. To force the match to always start from scratch instead of
+continuing where it left off, the C<reset> option may be used.
 
     $pattern->match($mol, atom => $atom)
 
@@ -228,7 +229,9 @@ sub match {
     my ($self, $mol, %opts) = @_;
     print "match $self $mol\n" if $DEBUG;
     if (defined($mol) and $self->map_to ne $mol 
-        or defined($opts{atom}) and $opts{atom} ne $self->{anchor}) { 
+        or $opts{reset}
+        or defined($opts{atom}) and $opts{atom} ne $self->{anchor}
+    ){ 
         $self->reset($mol, %opts);
     }
     my $match = $self->match_next;
@@ -452,7 +455,7 @@ sub _flatten {
 
 =head1 VERSION
 
-0.26
+0.27
 
 =head1 SEE ALSO
 
@@ -467,7 +470,7 @@ Ivan Tubert-Brohman E<lt>itub@cpan.orgE<gt>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2005 Ivan Tubert-Brohman. All rights reserved. This program is
+Copyright (c) 2009 Ivan Tubert-Brohman. All rights reserved. This program is
 free software; you can redistribute it and/or modify it under the same terms as
 Perl itself.
 

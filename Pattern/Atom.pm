@@ -1,6 +1,6 @@
 package Chemistry::Pattern::Atom;
-$VERSION = '0.26';
-# $Id: Atom.pm,v 1.11 2005/05/16 22:08:15 itubert Exp $
+$VERSION = '0.27';
+# $Id: Atom.pm,v 1.12 2009/05/10 20:56:06 itubert Exp $
 
 =head1 NAME
 
@@ -83,7 +83,7 @@ Chemistry::Obj::accessor('map_to');
 
 =head1 VERSION
 
-0.26
+0.27
 
 =head1 SEE ALSO
 
@@ -97,7 +97,7 @@ Ivan Tubert-Brohman E<lt>itub@cpan.orgE<gt>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2005 Ivan Tubert-Brohman. All rights reserved. This program is
+Copyright (c) 2009 Ivan Tubert-Brohman. All rights reserved. This program is
 free software; you can redistribute it and/or modify it under the same terms as
 Perl itself.
 
